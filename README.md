@@ -26,9 +26,6 @@ It allows users to post messages, comment, vote, and share posts, supporting use
 
 ## Live server URL: https://react-mern-discussion-platform-serv.vercel.app
 
-## Git repository Client: https://github.com/Programming-Hero-Web-Course4/b11a12-client-side-ChakmaShantunu.git
-
-## Git repository Server: https://github.com/Programming-Hero-Web-Course4/b11a12-server-side-ChakmaShantunu.git
 
 ---
 
