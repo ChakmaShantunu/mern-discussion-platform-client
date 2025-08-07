@@ -26,6 +26,10 @@ It allows users to post messages, comment, vote, and share posts, supporting use
 
 ## Live server URL: https://react-mern-discussion-platform-serv.vercel.app
 
+## 1.Admin Email: admin@gmail.com
+## 1.Admin Password: Admin@1234
+
+
 
 ---
 
