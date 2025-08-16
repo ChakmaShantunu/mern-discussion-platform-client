@@ -1,28 +1,40 @@
 import React, { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import useAxios from '../../../hooks/useAxios';  
+import useAxios from '../../../hooks/useAxios';
 import { Link } from 'react-router';
 
 const PostsList = () => {
     const axios = useAxios();
     const [page, setPage] = useState(1);
-    const [sort, setSort] = useState('newest'); // 'newest' or 'popularity'
+    const [sort, setSort] = useState('newest');
+    const [filterTag, setFilterTag] = useState('all');
     const limit = 5;
 
+
     const { data = {}, isLoading, isError, error } = useQuery({
-        queryKey: ['posts', page, sort],
+        queryKey: ['posts', page, sort, filterTag],
         queryFn: async () => {
-            const res = await axios.get(`/posts?page=${page}&limit=${limit}&sort=${sort}`);
+            let url = `/posts?page=${page}&limit=${limit}&sort=${sort}`;
+            if (filterTag !== 'all') url += `&tag=${filterTag}`;
+            const res = await axios.get(url);
             return res.data;
         },
         keepPreviousData: true
     });
 
+
+    const { data: tagsData = [], isLoading: tagsLoading } = useQuery({
+        queryKey: ['tags'],
+        queryFn: async () => {
+            const res = await axios.get('/tags');
+            return res.data;
+        }
+    });
+
     const posts = data.posts || [];
     const totalPages = Math.ceil((data.totalCount || 0) / limit);
 
-    if (isLoading) return <p className="text-center mt-4">Loading...</p>;
-
+    if (isLoading) return <p className="text-center mt-4">Loading posts...</p>;
     if (isError) return <p className="text-center mt-4 text-red-500">Error: {error.message}</p>;
 
     return (
@@ -34,20 +46,36 @@ const PostsList = () => {
                 </p>
             </div>
 
-            {/* Sort Buttons */}
-            <div className="flex justify-center gap-4 mb-6">
-                <button
-                    onClick={() => { setSort('newest'); setPage(1); }}
-                    className={`btn ${sort === 'newest' ? 'btn-primary' : 'btn-outline'}`}
+
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-6">
+
+                <div className="flex gap-2">
+                    <button
+                        onClick={() => { setSort('newest'); setPage(1); }}
+                        className={`btn ${sort === 'newest' ? 'btn-primary' : 'btn-outline'}`}
+                    >
+                        Newest
+                    </button>
+                    <button
+                        onClick={() => { setSort('popularity'); setPage(1); }}
+                        className={`btn ${sort === 'popularity' ? 'btn-primary' : 'btn-outline'}`}
+                    >
+                        Most Popular
+                    </button>
+                </div>
+
+
+                <select
+                    className="select select-bordered w-40"
+                    value={filterTag}
+                    onChange={(e) => { setFilterTag(e.target.value); setPage(1); }}
+                    disabled={tagsLoading}
                 >
-                    Newest
-                </button>
-                <button
-                    onClick={() => { setSort('popularity'); setPage(1); }}
-                    className={`btn ${sort === 'popularity' ? 'btn-primary' : 'btn-outline'}`}
-                >
-                    Most Popular
-                </button>
+                    <option value="all">All</option>
+                    {tagsData.map(tag => (
+                        <option key={tag._id} value={tag.tag}>{tag}</option>
+                    ))}
+                </select>
             </div>
 
             {posts.length === 0 && <p className="text-center text-gray-500">No posts found.</p>}
@@ -86,7 +114,7 @@ const PostsList = () => {
                 ))}
             </div>
 
-            {/* Pagination Controls */}
+
             <div className="mt-8 flex justify-center items-center gap-2">
                 <button
                     className="btn"
