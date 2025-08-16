@@ -52,6 +52,7 @@ const Footer = () => {
             </aside>
             <nav>
                 <h6 className="footer-title">Explore</h6>
+                {/* <Link to="manageEvents" className='link-hover'>Event Management</Link> */}
                 <a className="link link-hover">Browse Posts</a>
                 <a className="link link-hover">Featured Discussions</a>
                 <a className="link link-hover">Top Contributors</a>

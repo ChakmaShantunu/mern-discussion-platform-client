@@ -19,6 +19,7 @@ import MakeAnnouncement from "../pages/Dashboard/MakeAnnouncement/MakeAnnounceme
 import ReportedComments from "../pages/Dashboard/ReportedComments/ReportedComments";
 import AnnouncementSection from "../pages/Dashboard/MakeAnnouncement/AnnouncementSection";
 import Forbidden from "../pages/Dashboard/Forbidden/Forbidden";
+import GettingStarted from "../pages/Home/KnowledgeResources/GettingStarted";
 
 
 export const router = createBrowserRouter([
@@ -52,6 +53,10 @@ export const router = createBrowserRouter([
             {
                 path: 'announcementList',
                 element: <AnnouncementSection></AnnouncementSection>
+            },
+            {
+                path: 'gettingStarted',
+                element: <GettingStarted></GettingStarted>
             },
             {
                 path: '/forbidden',

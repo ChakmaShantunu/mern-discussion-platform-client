@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const resources = [
     {
         title: "Getting Started with the Forum",
         description: "Learn how to create an account, post, and interact with others.",
-        link: "/guides/getting-started"
+        link: "/gettingStarted"
     },
     {
         title: "Community Guidelines",
@@ -49,12 +50,15 @@ const KnowledgeResources = () => {
                     >
                         <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
                         <p className="text-sm text-gray-500 mb-4">{item.description}</p>
-                        <a
+                        {/* <a
                             href={item.link}
                             className="text-primary font-semibold hover:underline"
                         >
                             Read More →
-                        </a>
+                        </a> */}
+                        <Link to={item.link} className="text-primary font-semibold hover:underline">
+                            Read More →
+                        </Link>
                     </div>
                 ))}
             </div>
