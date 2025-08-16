@@ -28,7 +28,7 @@ const Subscription = () => {
     };
 
     return (
-        <section className="bg-base-200 py-16">
+        <section className="bg-base-200 py-16 rounded-xl">
             <div className="max-w-2xl mx-auto text-center px-4">
                 <h2 className="text-3xl font-bold mb-4">
                     Subscribe to Our Newsletter
