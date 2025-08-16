@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import useAxiosSecure from '../../../hooks/useAxiosSecure';
+import { useState } from 'react';
 
 const AnnouncementSection = () => {
     const axiosSecure = useAxiosSecure();
@@ -13,6 +14,8 @@ const AnnouncementSection = () => {
 
         }
     });
+
+    const [selectedAnnouncement, setSelectedAnnouncement] = useState(null);
 
     if (announcements.length === 0) return null;
 
@@ -28,28 +31,46 @@ const AnnouncementSection = () => {
 
             {/* Announcement List */}
             <ul className="space-y-6">
-                {announcements.map(({ _id, authorName, authorImage, title, description, createdAt }) => (
+                {announcements.map((announcement) => (
                     <li
-                        key={_id}
-                        className="p-4 bg-base-100 rounded-lg shadow transition-shadow duration-300 hover:shadow-md"
+                        key={announcement._id}
+                        className="p-4 bg-base-100 rounded-lg shadow transition-shadow duration-300 hover:shadow-md relative"
+                        onClick={() => setSelectedAnnouncement(announcement)}
                     >
                         <div className="flex items-center gap-4 mb-3">
                             <img
-                                src={authorImage}
-                                alt={authorName}
+                                src={announcement.authorImage}
+                                alt={announcement.authorName}
                                 className="w-10 h-10 rounded-full object-cover"
                             />
                             <div>
-                                <p className="font-semibold">{authorName}</p>
-                                <p className="text-xs text-gray-500">{new Date(createdAt).toLocaleString()}</p>
+                                <p className="font-semibold">{announcement.authorName}</p>
+                                <p className="text-xs text-gray-500">{new Date(announcement.createdAt).toLocaleString()}</p>
                             </div>
                         </div>
-                        <h3 className="text-lg font-bold mb-1">{title}</h3>
-                        <p className="">{description}</p>
+                        <h3 className="text-lg font-bold mb-1">{announcement.title}</h3>
+                        <p>{announcement.description.slice(0, 50)}...</p>
+
+                        {selectedAnnouncement?._id === announcement._id && (
+                            <div className="absolute left-0 top-full mt-2 w-full bg-base-100 p-4 rounded-lg shadow-lg z-10">
+                                <button
+                                    onClick={(e) => {
+                                        e.stopPropagation(); // Prevent parent li click
+                                        setSelectedAnnouncement(null);
+                                    }}
+                                    className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 font-bold"
+                                >
+                                    ✕
+                                </button>
+
+                                <h3 className="text-lg font-bold mb-2">{announcement.title}</h3>
+                                <p>{announcement.description}</p>
+                            </div>
+                        )}
                     </li>
+
                 ))}
             </ul>
-
         </section>
 
     );
