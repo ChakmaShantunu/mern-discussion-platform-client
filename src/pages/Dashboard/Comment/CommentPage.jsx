@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useParams } from 'react-router';
+import { Link, useParams } from 'react-router';
 import Swal from 'sweetalert2';
 import useAuth from '../../../hooks/useAuth';
 import useAxios from '../../../hooks/useAxios';
@@ -55,7 +55,7 @@ const CommentPage = () => {
         }
     };
 
-    // ছোট কমেন্ট ২০ ক্যারেক্টার পর্যন্ত দেখাবে, বেশি হলে ellipsis দিবে
+    
     const shortenText = (text) => {
         if (text.length <= 20) return text;
         return text.slice(0, 20) + '...';
@@ -120,7 +120,9 @@ const CommentPage = () => {
                         })}
                     </tbody>
                 </table>
+                
             )}
+            <Link to="/dashboard"><button className='btn mt-2'>Back to Dash</button></Link>
         </div>
     );
 };

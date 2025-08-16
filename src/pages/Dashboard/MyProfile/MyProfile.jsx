@@ -3,6 +3,7 @@ import useAuth from '../../../hooks/useAuth';
 import useAxiosSecure from '../../../hooks/useAxiosSecure';
 import Badge from '../../shared/Badge/Badge';
 import { useQuery } from '@tanstack/react-query';
+import { Link } from 'react-router';
 
 const MyProfile = () => {
     const { user } = useAuth();
@@ -75,16 +76,17 @@ const MyProfile = () => {
                 <h3 className="text-2xl font-semibold mb-4">Recent Posts</h3>
                 <div className="space-y-4">
                     {recentPosts.map((post) => (
-                        <div
+                        <Link
                             key={post._id}
-                            className="p-4 bg-base-100 rounded-lg shadow transition hover:shadow-md"
+                            to={`/postDetails/${post._id}`}
+                            className="block p-4 bg-base-100 rounded-lg shadow transition hover:shadow-md hover:bg-base-200"
                         >
                             <h4 className="text-xl font-bold">{post.title}</h4>
                             <p className="text-gray-600">{post.description}</p>
                             <div className="text-sm text-gray-400 mt-1">
                                 Tags: {post.tags?.join(', ') || 'N/A'}
                             </div>
-                        </div>
+                        </Link>
                     ))}
                     {recentPosts.length === 0 && (
                         <p className="text-gray-500 text-center">No posts found.</p>

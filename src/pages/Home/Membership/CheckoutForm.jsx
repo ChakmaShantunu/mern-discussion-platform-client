@@ -108,7 +108,7 @@ const CheckoutForm = () => {
     if (isError) return <p className="text-red-500 text-center mt-6">{userFetchError.message}</p>;
 
     return (
-        <div data-aos="fade-up" className="max-w-md mx-auto p-6 bg-base-100 shadow rounded">
+        <div data-aos="fade-up" className="max-w-md mx-auto my-8 p-6 bg-base-100 shadow rounded">
             <h2 className="text-2xl font-bold mb-4 text-center text-info">Become a Member</h2>
             <p className="mb-4 text-center">Pay $5 to get Gold Badge and unlimited posts!</p>
 
