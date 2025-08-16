@@ -65,14 +65,15 @@ const Footer = () => {
                 <Link to="topContributors" className='link-hover'>Membership Tiers</Link>
                 <Link to="membership" className='link-hover'>Become a Member</Link>
                 <Link to="communityGuidelines" className='link-hover'>Community Guidelines</Link>
+
             </nav>
 
             <nav>
                 <h6 className="footer-title">Support</h6>
-                <a className="link link-hover">Help Center</a>
+                <Link to="helpCenter" className='link-hover'>Help Center</Link>
                 <a className="link link-hover">Report a Post</a>
-                <a className="link link-hover">Privacy Policy</a>
-                <a className="link link-hover">Terms & Conditions</a>
+                <Link to="privacyPolicy" className='link-hover'>Privacy Policy</Link>
+                <Link to="termsAndConditions" className='link-hover'>Terms & Conditions</Link>
             </nav>
 
         </footer>

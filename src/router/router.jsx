@@ -28,6 +28,9 @@ import CommunityGuidelines from "../pages/Home/KnowledgeResources/CommunityGuide
 import FeaturedDiscussions from "../pages/shared/Footer/FeaturedDiscussions";
 import TopContributors from "../pages/shared/Footer/TopContributors";
 import TagsAndCategories from "../pages/shared/Footer/TagsAndCategories";
+import TermsAndConditions from "../pages/shared/Footer/TermsAndConditions";
+import PrivacyPolicy from "../pages/shared/Footer/PrivacyPolicy";
+import HelpCenter from "../pages/shared/Footer/HelpCenter";
 
 
 export const router = createBrowserRouter([
@@ -97,6 +100,18 @@ export const router = createBrowserRouter([
             {
                 path: 'tagsAndCategories',
                 element: <TagsAndCategories></TagsAndCategories>
+            },
+            {
+                path: 'termsAndConditions',
+                element: <TermsAndConditions></TermsAndConditions>
+            },
+            {
+                path: 'privacyPolicy',
+                element: <PrivacyPolicy></PrivacyPolicy>
+            },
+            {
+                path: 'helpCenter',
+                element: <HelpCenter></HelpCenter>
             },
             {
                 path: '/forbidden',
