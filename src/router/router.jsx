@@ -27,6 +27,7 @@ import MembershipTiersExplained from "../pages/Home/KnowledgeResources/Membershi
 import CommunityGuidelines from "../pages/Home/KnowledgeResources/CommunityGuidelines";
 import FeaturedDiscussions from "../pages/shared/Footer/FeaturedDiscussions";
 import TopContributors from "../pages/shared/Footer/TopContributors";
+import TagsAndCategories from "../pages/shared/Footer/TagsAndCategories";
 
 
 export const router = createBrowserRouter([
@@ -92,6 +93,10 @@ export const router = createBrowserRouter([
             {
                 path: 'topContributors',
                 element: <TopContributors></TopContributors>
+            },
+            {
+                path: 'tagsAndCategories',
+                element: <TagsAndCategories></TagsAndCategories>
             },
             {
                 path: '/forbidden',

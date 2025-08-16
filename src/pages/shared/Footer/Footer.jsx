@@ -56,7 +56,7 @@ const Footer = () => {
                 <a className="link link-hover">Browse Posts</a>
                 <Link to="featuredDiscussions" className='link-hover'>Featured Discussions</Link>
                 <Link to="topContributors" className='link-hover'>Top Contributors</Link>
-                <Link to="topContributors" className='link-hover'>Tags & Categories</Link>
+                <Link to="tagsAndCategories" className='link-hover'>Tags & Categories</Link>
             </nav>
 
             <nav>
