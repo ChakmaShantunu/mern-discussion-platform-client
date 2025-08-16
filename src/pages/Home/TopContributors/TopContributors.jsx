@@ -1,26 +1,33 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const dummyContributors = [
     {
+        id: 1,
         name: "Ayesha Rahman",
         image: "https://i.pravatar.cc/150?img=32",
         role: "Top Voter",
         posts: 24,
-        votes: 180
+        votes: 180,
+        link: "/contributors/1"
     },
     {
+        id: 2,
         name: "Tanvir Hossain",
         image: "https://i.pravatar.cc/150?img=12",
         role: "Discussion Leader",
         posts: 30,
-        votes: 150
+        votes: 150,
+        link: "/contributors/2"
     },
     {
+        id: 3,
         name: "Joya Akter",
         image: "https://i.pravatar.cc/150?img=25",
         role: "Most Helpful",
         posts: 18,
-        votes: 210
+        votes: 210,
+        link: "/contributors/3"
     },
 ];
 
@@ -50,6 +57,13 @@ const TopContributors = () => {
                             📝 Posts: <strong>{contributor.posts}</strong><br />
                             👍 Votes Received: <strong>{contributor.votes}</strong>
                         </p>
+
+                        <Link
+                            to={contributor.link}
+                            className="mt-auto text-primary font-medium hover:underline"
+                        >
+                            See More →
+                        </Link>
                     </div>
                 ))}
             </div>

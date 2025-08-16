@@ -61,7 +61,7 @@ const Footer = () => {
 
             <nav>
                 <h6 className="footer-title">Community</h6>
-                <Link to="topContributors" className='link-hover'>About QuickPost</Link>
+                <Link to="aboutQuickPost" className='link-hover'>About QuickPost</Link>
                 <Link to="topContributors" className='link-hover'>Membership Tiers</Link>
                 <Link to="membership" className='link-hover'>Become a Member</Link>
                 <Link to="communityGuidelines" className='link-hover'>Community Guidelines</Link>
@@ -71,7 +71,7 @@ const Footer = () => {
             <nav>
                 <h6 className="footer-title">Support</h6>
                 <Link to="helpCenter" className='link-hover'>Help Center</Link>
-                <a className="link link-hover">Report a Post</a>
+                <Link to="reportedComments" className='link-hover'>Report a Post</Link>
                 <Link to="privacyPolicy" className='link-hover'>Privacy Policy</Link>
                 <Link to="termsAndConditions" className='link-hover'>Terms & Conditions</Link>
             </nav>

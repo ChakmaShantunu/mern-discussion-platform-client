@@ -31,6 +31,9 @@ import TagsAndCategories from "../pages/shared/Footer/TagsAndCategories";
 import TermsAndConditions from "../pages/shared/Footer/TermsAndConditions";
 import PrivacyPolicy from "../pages/shared/Footer/PrivacyPolicy";
 import HelpCenter from "../pages/shared/Footer/HelpCenter";
+import AboutQuickPost from "../pages/shared/Footer/AboutQuickPost";
+import MemberDetails from "../pages/Home/Membership/MemberDetails";
+import ContributorDetails from "../pages/Home/TopContributors/ContributorDetails";
 
 
 export const router = createBrowserRouter([
@@ -86,6 +89,10 @@ export const router = createBrowserRouter([
                 element: <MembershipTiersExplained></MembershipTiersExplained>
             },
             {
+                path: 'memberDetails',
+                element: <MemberDetails></MemberDetails>
+            },
+            {
                 path: 'communityGuidelines',
                 element: <CommunityGuidelines></CommunityGuidelines>
             },
@@ -94,12 +101,20 @@ export const router = createBrowserRouter([
                 element: <FeaturedDiscussions></FeaturedDiscussions>
             },
             {
+                path: 'contributors/:id',
+                element: <ContributorDetails></ContributorDetails>
+            },
+            {
                 path: 'topContributors',
                 element: <TopContributors></TopContributors>
             },
             {
                 path: 'tagsAndCategories',
                 element: <TagsAndCategories></TagsAndCategories>
+            },
+            {
+                path: 'aboutQuickPost',
+                element: <AboutQuickPost></AboutQuickPost>
             },
             {
                 path: 'termsAndConditions',

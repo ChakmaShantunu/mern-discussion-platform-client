@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const featuredMember = {
     name: "Nusrat Jahan",
@@ -17,19 +18,21 @@ const MemberOfTheMonth = () => {
                 Celebrating outstanding contribution and positive impact in our community.
             </p>
 
-            <div className="bg-base-100 shadow-lg rounded-xl p-8 flex flex-col items-center">
-                <img
-                    src={featuredMember.image}
-                    alt={featuredMember.name}
-                    className="w-24 h-24 rounded-full object-cover border-4 border-primary mb-4"
-                />
-                <h3 className="text-2xl font-semibold">{featuredMember.name}</h3>
-                <p className="text-sm text-gray-500 mb-2">{featuredMember.role}</p>
-                <p className="text-gray-500 text-sm mb-4">{featuredMember.bio}</p>
-                <p className="text-sm">
-                    📝 Posts: <strong>{featuredMember.posts}</strong> | 👍 Votes: <strong>{featuredMember.votes}</strong>
-                </p>
-            </div>
+            <Link to="memberDetails">
+                <div className="bg-base-100 shadow-lg rounded-xl p-8 flex flex-col items-center">
+                    <img
+                        src={featuredMember.image}
+                        alt={featuredMember.name}
+                        className="w-24 h-24 rounded-full object-cover border-4 border-primary mb-4"
+                    />
+                    <h3 className="text-2xl font-semibold">{featuredMember.name}</h3>
+                    <p className="text-sm text-gray-500 mb-2">{featuredMember.role}</p>
+                    <p className="text-gray-500 text-sm mb-4">{featuredMember.bio}</p>
+                    <p className="text-sm">
+                        📝 Posts: <strong>{featuredMember.posts}</strong> | 👍 Votes: <strong>{featuredMember.votes}</strong>
+                    </p>
+                </div>
+            </Link>
         </div>
     );
 };
