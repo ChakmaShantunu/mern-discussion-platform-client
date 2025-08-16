@@ -17,7 +17,7 @@ const memberDetails = {
 
 const MemberDetails = () => {
     return (
-        <section className="bg-base-100 py-16 px-6 md:px-16">
+        <section data-aos="fade-up" className="bg-base-100 py-16 px-6 md:px-16">
             <div className="max-w-4xl mx-auto text-center">
                 <div className="flex flex-col items-center bg-base-200 p-8 rounded-2xl shadow-md">
                     <img

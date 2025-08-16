@@ -14,8 +14,10 @@ const Home = () => {
             <AnnouncementSection></AnnouncementSection>
             <TopContributors></TopContributors>
             <MemberOfTheMonth></MemberOfTheMonth>
-            <KnowledgeResources></KnowledgeResources>
-            
+            <section id="resources">
+                <KnowledgeResources></KnowledgeResources>
+            </section>
+
         </div>
     );
 };

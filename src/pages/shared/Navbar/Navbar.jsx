@@ -1,13 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link, NavLink } from 'react-router';
 import useAuth from '../../../hooks/useAuth';
 import useAxiosSecure from '../../../hooks/useAxiosSecure';
 import { useQuery } from '@tanstack/react-query';
 import logo from '../../../assets/images/logo.jpg'
+import { Link as ScrollLink } from "react-scroll";
+
 
 const Navbar = () => {
     const { user, logOut, loading } = useAuth();
     const [isOpen, setIsOpen] = useState(false);
+    const [showNotifications, setShowNotifications] = useState(false);
+    const notificationRef = useRef(null);
 
     const [theme, setTheme] = useState("light");
 
@@ -32,9 +36,32 @@ const Navbar = () => {
         document.documentElement.setAttribute("data-theme", newTheme);
         localStorage.setItem("theme", newTheme);
     };
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (notificationRef.current && !notificationRef.current.contains(event.target)) {
+                setShowNotifications(false);
+            }
+        };
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => document.removeEventListener("mousedown", handleClickOutside);
+    }, []);
+
     const navItems = <>
         <li><NavLink to='/' onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Home</NavLink></li>
         <li><NavLink to='/membership'>Membership</NavLink></li>
+        <li><NavLink to='/aboutQuickPost'>About</NavLink></li>
+        {/* <li>
+            <ScrollLink
+                to="resources"
+                smooth={true}
+                duration={500}
+                offset={-80}
+                className="cursor-pointer"
+            >
+                Knowledge Resources
+            </ScrollLink>
+        </li> */}
 
     </>
 
@@ -104,28 +131,49 @@ const Navbar = () => {
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
                 </label>
-                <Link to="/">
-                    <div className="relative">
-                        <svg
-                            className="w-6 h-6 text-blue-600"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth={2}
-                            viewBox="0 0 24 24"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M15 17h5l-1.405-1.405M19 13V7a7 7 0 10-14 0v6l-1.405 1.405M4 17h16"
-                            />
-                        </svg>
-                        {announcements.length > 0 && (
-                            <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs px-1 rounded-full">
-                                {announcements.length}
-                            </span>
-                        )}
-                    </div>
-                </Link>
+                {user && (
+                    <Link to="/">
+                        <div ref={notificationRef} className="relative">
+                            <div onClick={() => setShowNotifications(!showNotifications)}>
+                                <svg
+                                    className="w-6 h-6 text-blue-600"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth={2}
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        d="M15 17h5l-1.405-1.405M19 13V7a7 7 0 10-14 0v6l-1.405 1.405M4 17h16"
+                                    />
+                                </svg>
+
+                                {announcements.length > 0 && (
+                                    <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs px-1 rounded-full">
+                                        {announcements.length}
+                                    </span>
+                                )}
+                            </div>
+
+                            {showNotifications && announcements.length > 0 && (
+                                <div className="absolute right-0 mt-2 w-64 bg-base-100 rounded-lg shadow-lg z-10 overflow-hidden">
+                                    <div className="py-2">
+                                        {announcements.map((item) => (
+                                            <div
+                                                key={item._id || item.id}
+                                                className="px-4 py-2 hover:bg-base-200 cursor-pointer text-sm"
+                                            >
+                                                {item.title}
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+                    </Link>
+                )}
+
 
                 {!loading ? (
                     user ? (

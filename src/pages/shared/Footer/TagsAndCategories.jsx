@@ -9,7 +9,7 @@ const TagsAndCategories = () => {
     const [selectedTag, setSelectedTag] = useState(null);
 
     return (
-        <section className="bg-base-100 py-16 px-6 md:px-16">
+        <section data-aos="fade-up" className="bg-base-100 py-16 px-6 md:px-16">
             <div className="max-w-6xl mx-auto">
                 <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
                     Tags & <span className="text-primary">Categories</span>

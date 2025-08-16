@@ -31,7 +31,7 @@ const guidelines = [
 
 const CommunityGuidelines = () => {
     return (
-        <section className="bg-base-100 py-16 px-6 md:px-16">
+        <section data-aos="fade-up" className="bg-base-100 py-16 px-6 md:px-16">
             <div className="max-w-5xl mx-auto text-center">
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">
                     Community <span className="text-primary">Guidelines</span>
