@@ -1,4 +1,4 @@
-// src/components/GettingStarted.jsx
+
 import React from "react";
 
 const gettingStartedSteps = [

@@ -1,4 +1,4 @@
-// src/components/PostingBestPractices.jsx
+
 import React from "react";
 
 const bestPractices = [

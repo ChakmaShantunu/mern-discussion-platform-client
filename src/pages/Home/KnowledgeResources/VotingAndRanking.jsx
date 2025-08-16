@@ -1,4 +1,4 @@
-// src/components/VotingAndRanking.jsx
+
 import React from "react";
 
 const votingInfo = [

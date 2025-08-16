@@ -1,4 +1,4 @@
-// src/components/ReportingAndModeration.jsx
+
 import React from "react";
 
 const reportingInfo = [

@@ -1,4 +1,4 @@
-// src/components/MembershipTiersExplained.jsx
+
 import React from "react";
 
 const tiersInfo = [

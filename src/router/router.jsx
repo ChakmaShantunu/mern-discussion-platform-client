@@ -25,6 +25,8 @@ import VotingAndRanking from "../pages/Home/KnowledgeResources/VotingAndRanking"
 import ReportingAndModeration from "../pages/Home/KnowledgeResources/ReportingAndModeration";
 import MembershipTiersExplained from "../pages/Home/KnowledgeResources/MembershipTiersExplained";
 import CommunityGuidelines from "../pages/Home/KnowledgeResources/CommunityGuidelines";
+import FeaturedDiscussions from "../pages/shared/Footer/FeaturedDiscussions";
+import TopContributors from "../pages/shared/Footer/TopContributors";
 
 
 export const router = createBrowserRouter([
@@ -82,6 +84,14 @@ export const router = createBrowserRouter([
             {
                 path: 'communityGuidelines',
                 element: <CommunityGuidelines></CommunityGuidelines>
+            },
+            {
+                path: 'featuredDiscussions',
+                element: <FeaturedDiscussions></FeaturedDiscussions>
+            },
+            {
+                path: 'topContributors',
+                element: <TopContributors></TopContributors>
             },
             {
                 path: '/forbidden',

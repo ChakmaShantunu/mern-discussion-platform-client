@@ -54,17 +54,17 @@ const Footer = () => {
                 <h6 className="footer-title">Explore</h6>
                 {/* <Link to="manageEvents" className='link-hover'>Event Management</Link> */}
                 <a className="link link-hover">Browse Posts</a>
-                <a className="link link-hover">Featured Discussions</a>
-                <a className="link link-hover">Top Contributors</a>
-                <a className="link link-hover">Tags & Categories</a>
+                <Link to="featuredDiscussions" className='link-hover'>Featured Discussions</Link>
+                <Link to="topContributors" className='link-hover'>Top Contributors</Link>
+                <Link to="topContributors" className='link-hover'>Tags & Categories</Link>
             </nav>
 
             <nav>
                 <h6 className="footer-title">Community</h6>
-                <a className="link link-hover">About QuickPost</a>
-                <a className="link link-hover">Membership Tiers</a>
-                <a className="link link-hover">Become a Member</a>
-                <a className="link link-hover">Community Guidelines</a>
+                <Link to="topContributors" className='link-hover'>About QuickPost</Link>
+                <Link to="topContributors" className='link-hover'>Membership Tiers</Link>
+                <Link to="membership" className='link-hover'>Become a Member</Link>
+                <Link to="communityGuidelines" className='link-hover'>Community Guidelines</Link>
             </nav>
 
             <nav>

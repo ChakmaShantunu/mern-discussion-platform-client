@@ -1,4 +1,4 @@
-// src/components/CommunityGuidelines.jsx
+
 import React from "react";
 
 const guidelines = [
