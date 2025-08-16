@@ -20,6 +20,11 @@ import ReportedComments from "../pages/Dashboard/ReportedComments/ReportedCommen
 import AnnouncementSection from "../pages/Dashboard/MakeAnnouncement/AnnouncementSection";
 import Forbidden from "../pages/Dashboard/Forbidden/Forbidden";
 import GettingStarted from "../pages/Home/KnowledgeResources/GettingStarted";
+import PostingBestPractices from "../pages/Home/KnowledgeResources/PostingBestPractices";
+import VotingAndRanking from "../pages/Home/KnowledgeResources/VotingAndRanking";
+import ReportingAndModeration from "../pages/Home/KnowledgeResources/ReportingAndModeration";
+import MembershipTiersExplained from "../pages/Home/KnowledgeResources/MembershipTiersExplained";
+import CommunityGuidelines from "../pages/Home/KnowledgeResources/CommunityGuidelines";
 
 
 export const router = createBrowserRouter([
@@ -57,6 +62,26 @@ export const router = createBrowserRouter([
             {
                 path: 'gettingStarted',
                 element: <GettingStarted></GettingStarted>
+            },
+            {
+                path: 'postingBestPractices',
+                element: <PostingBestPractices></PostingBestPractices>
+            },
+            {
+                path: 'votingAndRanking',
+                element: <VotingAndRanking></VotingAndRanking>
+            },
+            {
+                path: 'reportingAndModeration',
+                element: <ReportingAndModeration></ReportingAndModeration>
+            },
+            {
+                path: 'membershipTiersExplained',
+                element: <MembershipTiersExplained></MembershipTiersExplained>
+            },
+            {
+                path: 'communityGuidelines',
+                element: <CommunityGuidelines></CommunityGuidelines>
             },
             {
                 path: '/forbidden',

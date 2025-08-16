@@ -10,27 +10,27 @@ const resources = [
     {
         title: "Community Guidelines",
         description: "Understand the rules and values that shape our platform.",
-        link: "/guides/community-guidelines"
+        link: "/communityGuidelines"
     },
     {
         title: "Posting Best Practices",
         description: "Tips for writing clear, helpful, and engaging posts.",
-        link: "/guides/posting-best-practices"
+        link: "/postingBestPractices"
     },
     {
         title: "Voting and Ranking System",
         description: "How upvotes and downvotes impact content visibility.",
-        link: "/guides/voting-system"
+        link: "/votingAndRanking"
     },
     {
         title: "Membership Tiers Explained",
         description: "See the benefits of different membership levels.",
-        link: "/guides/membership"
+        link: "/membershipTiersExplained"
     },
     {
         title: "Reporting and Moderation",
         description: "How to report inappropriate content and how moderation works.",
-        link: "/guides/reporting"
+        link: "/reportingAndModeration"
     },
 ];
 

@@ -43,12 +43,6 @@ const GettingStarted = () => {
                         >
                             <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
                             <p className="text-gray-600 mb-4">{step.description}</p>
-                            <a
-                                href="/help"
-                                className="text-primary font-medium hover:underline"
-                            >
-                                Read More →
-                            </a>
                         </div>
                     ))}
                 </div>

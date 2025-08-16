@@ -43,12 +43,6 @@ const PostingBestPractices = () => {
                         >
                             <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
                             <p className="text-gray-600 mb-4">{item.description}</p>
-                            <a
-                                href="/help"
-                                className="text-primary font-medium hover:underline"
-                            >
-                                Read More →
-                            </a>
                         </div>
                     ))}
                 </div>
