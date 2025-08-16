@@ -5,6 +5,7 @@ import AnnouncementSection from '../../Dashboard/MakeAnnouncement/AnnouncementSe
 import TopContributors from '../TopContributors/TopContributors';
 import KnowledgeResources from '../KnowledgeResources/KnowledgeResources';
 import MemberOfTheMonth from '../Membership/MemberOfTheMonth';
+import FAQSection from '../Faq/FAQSection';
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
             <PostsList></PostsList>
             <AnnouncementSection></AnnouncementSection>
             <TopContributors></TopContributors>
+            <FAQSection></FAQSection>
             <MemberOfTheMonth></MemberOfTheMonth>
             <section id="resources">
                 <KnowledgeResources></KnowledgeResources>
