@@ -73,7 +73,6 @@ const Footer = () => {
             <nav>
                 <h6 className="footer-title">Support</h6>
                 <Link to="helpCenter" className='link-hover'>Help Center</Link>
-                <Link to="reportedComments" className='link-hover'>Report a Post</Link>
                 <Link to="privacyPolicy" className='link-hover'>Privacy Policy</Link>
                 <Link to="termsAndConditions" className='link-hover'>Terms & Conditions</Link>
             </nav>
