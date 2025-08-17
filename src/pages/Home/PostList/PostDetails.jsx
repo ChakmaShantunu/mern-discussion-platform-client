@@ -125,7 +125,7 @@ const PostDetails = () => {
                             title="Login required to share"
                             onClick={() => alert('Please login to share this post')}
                         >
-                            Share with ⬇️
+                            Share ⬇️
                         </div>
                     )}
                 </div>

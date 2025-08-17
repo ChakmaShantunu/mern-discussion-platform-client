@@ -206,7 +206,7 @@ const Navbar = () => {
                         </>
                     ) : (
                         <Link to='/joinUs'>
-                            <button className='btn btn-neutral'>Join Us</button>
+                            <button className='btn btn-neutral'>Join</button>
                         </Link>
                     )
                 ) : (
