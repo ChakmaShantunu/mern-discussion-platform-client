@@ -19,6 +19,7 @@
     "cookie-parser": "^1.4.7",
     "firebase": "^11.10.0",
     "jsonwebtoken": "^9.0.2",
+    "lucide-react": "^0.539.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-hook-form": "^7.60.0",

@@ -21,7 +21,7 @@ const AboutQuickPost = () => {
 
                 {/* Features */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div className="p-6 shadow-md rounded-xl bg-base-200">
+                    <div className="p-6 shadow-md rounded-xl bg-base-200 hover:shadow-xl">
                         <h3 className="font-semibold text-lg mb-2">✨ Easy Posting</h3>
                         <p className="text-sm text-gray-600">
                             Share your thoughts quickly with a simple and user-friendly post
@@ -29,7 +29,7 @@ const AboutQuickPost = () => {
                         </p>
                     </div>
 
-                    <div className="p-6 shadow-md rounded-xl bg-base-200">
+                    <div className="p-6 shadow-md rounded-xl bg-base-200 hover:shadow-xl">
                         <h3 className="font-semibold text-lg mb-2">👍 Voting System</h3>
                         <p className="text-sm text-gray-600">
                             Discover the best content through an interactive upvote and
@@ -37,7 +37,7 @@ const AboutQuickPost = () => {
                         </p>
                     </div>
 
-                    <div className="p-6 shadow-md rounded-xl bg-base-200">
+                    <div className="p-6 shadow-md rounded-xl bg-base-200 hover:shadow-xl">
                         <h3 className="font-semibold text-lg mb-2">🌍 Community</h3>
                         <p className="text-sm text-gray-600">
                             Connect with learners and experts in a positive and engaging

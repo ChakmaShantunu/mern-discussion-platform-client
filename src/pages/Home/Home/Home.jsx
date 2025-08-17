@@ -11,28 +11,28 @@ import Subscription from '../Subscription/Subscription';
 const Home = () => {
     return (
         <div>
-            <section className='py-12'>
+            <section className='py-6'>
                 <Banner></Banner>
             </section>
-            <section className='py-12'>
+            <section className='py-6'>
                 <PostsList></PostsList>
             </section>
-            <section className='py-12'>
+            <section className='py-6'>
                 <AnnouncementSection></AnnouncementSection>
             </section>
-            <section className='py-12'>
+            <section className='py-6'>
                 <TopContributors></TopContributors>
             </section>
-            <section className='py-12'>
+            <section className='py-6'>
                 <FAQSection></FAQSection>
             </section>
-            <section className='py-12'>
+            <section className='py-6'>
                 <Subscription></Subscription>
             </section>
-            <section className='py-12'>
+            <section className='py-6'>
                 <MemberOfTheMonth></MemberOfTheMonth>
             </section>
-            <section id="resources" className='py-12 px-4 md:px-8 lg:px-16'>
+            <section id="resources" className='py-6 px-4 md:px-8 lg:px-16'>
                 <KnowledgeResources></KnowledgeResources>
             </section>
 

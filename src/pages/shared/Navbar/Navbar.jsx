@@ -4,7 +4,6 @@ import useAuth from '../../../hooks/useAuth';
 import useAxiosSecure from '../../../hooks/useAxiosSecure';
 import { useQuery } from '@tanstack/react-query';
 import logo from '../../../assets/images/logo.jpg'
-import { Link as ScrollLink } from "react-scroll";
 
 
 const Navbar = () => {
@@ -51,17 +50,8 @@ const Navbar = () => {
         <li><NavLink to='/' onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Home</NavLink></li>
         <li><NavLink to='/membership'>Membership</NavLink></li>
         <li><NavLink to='/aboutQuickPost'>About</NavLink></li>
-        {/* <li>
-            <ScrollLink
-                to="resources"
-                smooth={true}
-                duration={500}
-                offset={-80}
-                className="cursor-pointer"
-            >
-                Knowledge Resources
-            </ScrollLink>
-        </li> */}
+        <li><NavLink to='/resources'>Resources</NavLink></li>
+
 
     </>
 
@@ -157,7 +147,7 @@ const Navbar = () => {
                             </div>
 
                             {showNotifications && announcements.length > 0 && (
-                                <div className="absolute right-0 mt-2 w-64 bg-base-100 rounded-lg shadow-lg z-10 overflow-hidden">
+                                <div data-aos="zoom-in-down" className="absolute right-0 mt-2 w-64 bg-base-100 rounded-lg shadow-lg z-10 overflow-hidden">
                                     <div className="py-2">
                                         {announcements.map((item) => (
                                             <div
@@ -183,9 +173,9 @@ const Navbar = () => {
                                 className='p-4 md:py-1 md:px-2 border-[1px] border-neutral-200 flex flex-row items-center gap-3 rounded-full cursor-pointer hover:shadow-md transition'
                             >
                                 <div className='hidden md:block'>
-                                    {/* Avatar */}
+                                    
                                     <img
-                                        className='rounded-full'
+                                        className='rounded-full object-cover w-8 h-8 sm:w-10 sm:h-10 md:w-11 md:h-11'
                                         referrerPolicy='no-referrer'
                                         src={user?.image || user?.photoURL || 'https://i.ibb.co/2kR8vG5/default-user.png'}
                                         alt='profile'

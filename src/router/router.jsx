@@ -34,6 +34,7 @@ import HelpCenter from "../pages/shared/Footer/HelpCenter";
 import AboutQuickPost from "../pages/shared/Footer/AboutQuickPost";
 import MemberDetails from "../pages/Home/Membership/MemberDetails";
 import ContributorDetails from "../pages/Home/TopContributors/ContributorDetails";
+import Resources from "../pages/Home/Resources/Resources";
 
 
 export const router = createBrowserRouter([
@@ -127,6 +128,10 @@ export const router = createBrowserRouter([
             {
                 path: 'helpCenter',
                 element: <HelpCenter></HelpCenter>
+            },
+            {
+                path: 'resources',
+                element: <Resources></Resources>
             },
             {
                 path: '/forbidden',
