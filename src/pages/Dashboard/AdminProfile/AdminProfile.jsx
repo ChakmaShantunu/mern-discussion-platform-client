@@ -124,7 +124,7 @@ const AdminProfile = () => {
                     />
                     <button
                         type="submit"
-                        className="bg-info px-6 py-2 rounded hover:bg-info w-full sm:w-auto"
+                        className="btn px-6 py-2 rounded hover:bg-info w-full sm:w-auto"
                     >
                         Add Tag
                     </button>

@@ -101,7 +101,7 @@ const PostDetails = () => {
                                 role="button"
                                 className="btn m-1"
                             >
-                                Share with ⬇️
+                                Share ⬇️
                             </div>
                             <ul
                                 tabIndex={0}

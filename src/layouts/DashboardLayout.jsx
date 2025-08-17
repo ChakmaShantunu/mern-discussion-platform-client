@@ -34,7 +34,9 @@ const DashboardLayout = () => {
                     <div className="mx-2 flex-1 px-2">Dashboard</div>
                 </div>
                 {/* Page content here */}
-                <Outlet></Outlet>
+                <div className='p-6'>
+                    <Outlet></Outlet>
+                </div>
             </div>
             <div data-aos="fade-right" className="drawer-side">
                 <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
