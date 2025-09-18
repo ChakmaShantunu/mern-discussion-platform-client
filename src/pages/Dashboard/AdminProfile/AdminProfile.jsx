@@ -67,11 +67,11 @@ const AdminProfile = () => {
     ];
 
     return (
-        <div data-aos="fade-right" className="max-w-5xl mx-auto px-4 py-6 bg-base-100 rounded-lg shadow">
+        <div data-aos="fade-right" className="w-full mx-auto bg-base-100 rounded-lg p-4">
             <h2 className="text-3xl font-bold mb-6 text-center md:text-left">Admin Profile</h2>
 
             {/* Profile Info */}
-            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-8">
+            <div className="flex flex-col justify-center sm:flex-row items-center sm:items-start gap-6 mb-8">
                 <img
                     src={adminInfo?.photoURL || 'https://via.placeholder.com/100'}
                     alt="Admin"

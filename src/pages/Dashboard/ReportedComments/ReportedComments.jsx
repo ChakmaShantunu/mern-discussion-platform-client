@@ -34,7 +34,7 @@ const ReportedComments = () => {
     };
 
     return (
-        <div data-aos="fade-right" className="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+        <div data-aos="fade-right" className="w-full mx-auto bg-base-100 rounded-lg p-4 sm:p-6">
             <h2 className="text-3xl font-bold mb-6 text-center sm:text-left">Reported Comments</h2>
 
             {reports.length === 0 ? (

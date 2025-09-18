@@ -49,7 +49,7 @@ const MakeAnnouncement = () => {
     };
 
     return (
-        <div data-aos="fade-right" className="max-w-6xl p-12 bg-base-100 rounded-lg shadow-lg mx-auto">
+        <div data-aos="fade-right" className="w-full mx-auto bg-base-100 rounded-lg p-4">
             <h2 className="text-3xl font-bold mb-8 text-center">Make Announcement</h2>
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
 

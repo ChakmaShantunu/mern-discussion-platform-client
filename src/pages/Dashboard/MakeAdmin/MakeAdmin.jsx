@@ -30,7 +30,7 @@ const ManageUsers = () => {
     };
 
     return (
-        <div data-aos="fade-right" className="p-6 max-w-7xl mx-auto">
+        <div data-aos="fade-right" className="w-full mx-auto bg-base-100 rounded-lg p-4">
             <h2 className="text-2xl font-semibold mb-4 text-center lg:text-left">
                 Manage Users
             </h2>
@@ -139,10 +139,6 @@ const ManageUsers = () => {
                 </>
             )}
         </div>
-
-
-
-
     );
 };
 
